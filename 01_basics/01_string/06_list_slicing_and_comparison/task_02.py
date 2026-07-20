@@ -3,19 +3,19 @@
 #
 # v = [1205, 1101, 1434, 1320, 923, 874]
 #
-# Using list slicing, select the first three values from the list `v`
+# Using list slicing, select the last four values from the list `v`
 # and display this slice as a list.
 #
 # Input:
 # No input.
 #
 # Output:
-# The first three elements of the list.
+# The last four elements of the list.
 #
 # Example:
 # Output:
-# [1205, 1101, 1434]
+# [1434, 1320, 923, 874]
 
 v = [1205, 1101, 1434, 1320, 923, 874]
 
-print(v[:3])
+print(v[-4:])
