@@ -20,16 +20,15 @@
 # Output:
 # 56
 
-number = int(input())
-
-seconds = 0 if number >= 59 else number + 1
+number_1 = int(input())
+seconds = 0 if number_1 >= 59 else number_1 + 1
 
 print(seconds)
 
+
 # Solution using only arithmetic operations.
 
-number = int(input())
-
-second = (number + 1) % 60
+number_2 = int(input())
+second = (number_2 + 1) % 60
 
 print(second)

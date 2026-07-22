@@ -22,3 +22,12 @@
 #
 # Output:
 # #C A B
+
+m = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
+numbers = list(map(int, input().split()))
+
+a = "#" + m[numbers[0] - 1] if numbers[0] == 1 or numbers[0] == 4 else m[numbers[0] - 1]
+b = "#" + m[numbers[1] - 1] if numbers[1] == 1 or numbers[1] == 4 else m[numbers[1] - 1]
+c = "#" + m[numbers[2] - 1] if numbers[2] == 1 or numbers[2] == 4 else m[numbers[2] - 1]
+
+print(a, b, c)
