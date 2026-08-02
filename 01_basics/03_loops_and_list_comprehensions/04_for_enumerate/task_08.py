@@ -21,3 +21,30 @@
 #
 # Output:
 # 23
+from unittest import result
+
+N = list(input().replace(' ', '').replace('+', ' + ').replace('-', ' - ').split())
+
+if N[0] == '-':
+    N[0] += N.pop(1)
+
+result = int(N[0])
+
+for index, digit in enumerate(N):
+    if digit == '+' and N[index + 1] != '-':
+        result += int(N[index + 1])
+        index += 1
+    elif digit == '-' and N[index + 1] != '-':
+        result -= int(N[index + 1])
+        index += 1
+    elif digit == '+' and N[index + 1] != '-':
+        del N[index], N[index + 1]
+        result -= int(N[index])
+        index += 1
+    elif digit == '-' and N[index + 1] != '-':
+        del N[index], N[index + 1]
+        result += int(N[index])
+        index += 1
+
+
+print(result)
