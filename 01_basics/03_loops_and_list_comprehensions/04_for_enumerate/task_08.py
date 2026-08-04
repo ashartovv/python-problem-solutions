@@ -21,7 +21,6 @@
 #
 # Output:
 # 23
-from unittest import result
 
 N = list(input().replace(' ', '').replace('+', ' + ').replace('-', ' - ').split())
 
