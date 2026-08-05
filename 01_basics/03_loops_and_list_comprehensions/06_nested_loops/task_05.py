@@ -26,3 +26,16 @@
 # Output:
 # YES
 
+import sys
+
+s = sys.stdin.readlines()
+lst_in = [list(map(int, x.strip().split())) for x in s]
+
+result = "YES"
+
+for row in range(5):
+    for col in range(5):
+        if lst_in[row][col] != lst_in[col][row]:
+            result = "NO"
+
+print(result)
