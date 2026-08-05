@@ -17,3 +17,14 @@
 # Output:
 # 2 3 5 7
 
+n = int(input())
+
+
+for index in range(2, n):
+    is_prime = True
+    for prime in range(2, index):
+        if index % prime == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(index, end=' ')
