@@ -19,3 +19,19 @@
 #
 # Output:
 # 64 64 64 16 8 4 1
+
+n = int(input())
+
+banknotes = [64, 32, 16, 8, 4, 2, 1]
+used_banknotes = []
+
+while n:
+    for index in range(len(banknotes)):
+        for count in range(n):
+            if n >= banknotes[index]:
+                used_banknotes.append(banknotes[index])
+                n -= banknotes[index]
+            else:
+                break
+
+print(*used_banknotes)

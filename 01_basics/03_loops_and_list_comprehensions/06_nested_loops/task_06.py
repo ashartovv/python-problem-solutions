@@ -26,3 +26,11 @@
 # Output:
 # -53 2 8 10 11 11
 
+N = list(map(int, input().split()))
+
+
+for index in range(len(N)):
+    min_index = index + N[index:].index(min(N[index:]))
+    N[index],  N[min_index] = N[min_index], N[index]
+
+print(*N)

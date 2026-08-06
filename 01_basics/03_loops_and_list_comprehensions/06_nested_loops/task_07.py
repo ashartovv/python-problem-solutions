@@ -27,3 +27,21 @@
 # Output:
 # -56 -1 0 2 3 3 4 5 6
 
+N = list(map(int, input().split()))
+
+swapped = True
+index = 0
+
+while swapped:
+    swapped = False
+
+    for loop in range(len(N) - 1 - index):
+        if N[loop] <= N[loop + 1]:
+            continue
+        else:
+            N[loop + 1], N[loop] = N[loop], N[loop + 1]
+            swapped = True
+
+    index += 1
+
+print(*N)
