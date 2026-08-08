@@ -16,3 +16,17 @@
 # Output:
 # ('True', 'true') ('Don', 'river') ('Lena', 'name') ('Moscow', 'city')
 
+lst_in = input().split()
+
+d = dict([
+    [value for value in row.split('=')]
+    for row in lst_in
+])
+
+if 'False' in d:
+    del d['False']
+
+if '3' in d:
+    del d['3']
+
+print(*sorted(d.items()))

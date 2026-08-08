@@ -12,7 +12,7 @@
 #
 # When a cached value is used, print:
 #
-# значение из кэша: <number>
+# Value from cache: <number>
 #
 # Use the round() function for rounding.
 #
@@ -31,7 +31,7 @@
 # 1.0
 # 1.41
 # 1.73
-# значение из кэша: 1.73
-# значение из кэша: 1.41
+# Value from cache: 1.73
+# Value from cache: 1.41
 # 2.0
 

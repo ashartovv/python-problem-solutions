@@ -8,17 +8,16 @@
 #
 # Go through the list of URLs using a loop.
 #
-# If a URL appears for the first time:
-# print:
+# If a URL appears for the first time, print:
 #
-# HTML-страница для адреса <URL>
+# HTML page for address <URL>
 #
 # and save this string in a dictionary using the current URL as the key.
 #
-# If the URL appears again:
-# get the previously saved string from the dictionary and print:
+# If the URL appears again, get the previously saved string from the dictionary
+# and print:
 #
-# Взято из кэша: HTML-страница для адреса <URL>
+# Taken from cache: HTML page for address <URL>
 #
 # Print each message on a new line.
 #
@@ -28,16 +27,16 @@
 # Test data
 #
 # Input:
-# ustanovka-i-zapusk-yazyka
-# ustanovka-i-poryadok-raboty-pycharm
-# peremennyye-operator-prisvaivaniya-tipy-dannykh
-# arifmeticheskiye-operatsii
-# ustanovka-i-poryadok-raboty-pycharm
+# installation-and-launch-of-language
+# installation-and-pycharm-work-order
+# variables-assignment-operator-data-types
+# arithmetic-operations
+# installation-and-pycharm-work-order
 #
 # Output:
-# HTML-страница для адреса ustanovka-i-zapusk-yazyka
-# HTML-страница для адреса ustanovka-i-poryadok-raboty-pycharm
-# HTML-страница для адреса peremennyye-operator-prisvaivaniya-tipy-dannykh
-# HTML-страница для адреса arifmeticheskiye-operatsii
-# Взято из кэша: HTML-страница для адреса ustanovka-i-poryadok-raboty-pycharm
+# HTML page for address installation-and-launch-of-language
+# HTML page for address installation-and-pycharm-work-order
+# HTML page for address variables-assignment-operator-data-types
+# HTML page for address arithmetic-operations
+# Taken from cache: HTML page for address installation-and-pycharm-work-order
 

@@ -16,3 +16,14 @@
 # Output:
 # YES
 
+lst_in = input().split()
+
+d = dict([
+    [value for value in row.split('=')]
+    for row in lst_in
+])
+
+if 'house' in d and 'True' in d and '5' in d:
+    print("NO")
+else:
+    print("YES")
