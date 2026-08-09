@@ -35,3 +35,16 @@
 # Value from cache: 1.41
 # 2.0
 
+import math
+
+d = {}
+
+while True:
+    n = int(input())
+    if n == 0:
+        break
+    elif n in d:
+        print(f"значение из кэша: {d[n]}")
+    else:
+        d[n] = round(math.sqrt(n), 2)
+        print(d[n])

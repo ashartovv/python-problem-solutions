@@ -35,3 +35,21 @@
 # Output:
 # ('Mikhail', ['+51234567890']) ('Nikolay', ['+72134567890']) ('Sergey', ['+71234567890', '+71234567810'])
 
+import sys
+
+lst_in = list(map(str.strip, sys.stdin.readlines()))
+
+d = {}
+
+values = [
+    [value for value in row.split()]
+    for row in lst_in
+]
+
+for value in values:
+    if value[1] in d:
+        d[value[1]].append(value[0])
+    else:
+        d[value[1]] = [value[0]]
+
+print(*sorted(d.items()))
