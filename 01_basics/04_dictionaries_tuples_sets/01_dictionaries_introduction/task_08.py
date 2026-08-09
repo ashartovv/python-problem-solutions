@@ -40,3 +40,15 @@
 # HTML page for address arithmetic-operations
 # Taken from cache: HTML page for address installation-and-pycharm-work-order
 
+import sys
+
+lst_in = list(map(str.strip, sys.stdin.readlines()))
+
+url_dict = {}
+
+for url in lst_in:
+    if url in url_dict:
+        print(f"Взято из кэша: {url_dict[url]}")
+    else:
+        url_dict[url] = f"HTML-страница для адреса {url}"
+        print(url_dict[url])
