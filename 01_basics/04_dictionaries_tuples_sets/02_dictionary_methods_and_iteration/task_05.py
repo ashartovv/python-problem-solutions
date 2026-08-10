@@ -42,3 +42,37 @@
 # Output:
 # tent tarpaulin fishing_rod trousers saw pencil matches
 
+things = {
+    'pencil': 20,
+    'mirror': 100,
+    'umbrella': 500,
+    'shirt': 300,
+    'trousers': 1000,
+    'paper': 200,
+    'hammer': 600,
+    'saw': 400,
+    'fishing_rod': 1200,
+    'comb': 40,
+    'camping_pot': 820,
+    'tent': 5240,
+    'tarpaulin': 2130,
+    'matches': 10
+}
+
+N = int(input()) * 1000
+
+
+while N >= 10 and things:
+    values_max = max(things.values())
+    if N >= values_max:
+        N-= values_max
+        for key, value in things.items():
+            if value == values_max:
+                print(key, end=' ')
+                del things[key]
+                break
+    else:
+        for key, value in things.items():
+            if value == values_max:
+                del things[key]
+                break

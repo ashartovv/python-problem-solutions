@@ -43,3 +43,24 @@
 # 4: Elena, Svetlana
 # 7: Vladimir
 
+import sys
+
+# считывание списка из входного потока
+lst_in = list(map(str.strip, sys.stdin.readlines()))
+
+# здесь продолжайте программу (используйте список lst_in)
+d = {}
+
+lst = [
+    [int(value) if value.isdigit() else value for value in row.split()]
+    for row in lst_in
+]
+
+for row in lst:
+    if row[0] in d:
+        d[row[0]].append(row[1])
+    else:
+        d[row[0]] = [row[1]]
+
+for key, value in d.items():
+    print(f"{key}: {', '.join(value)}")
