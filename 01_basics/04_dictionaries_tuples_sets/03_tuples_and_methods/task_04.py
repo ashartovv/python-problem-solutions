@@ -19,3 +19,8 @@
 # Output:
 # varvara vasilisa vasiliy
 
+student_names = tuple(map(str, input().lower().split()))
+
+for name in student_names:
+    if 'va' in name:
+        print(name, end=' ')
