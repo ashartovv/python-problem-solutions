@@ -33,5 +33,34 @@
 # 0 0 0 0 0
 #
 # Output:
-# True
+# No output.
 
+import sys
+
+
+def is_isolate(lst, row, col):
+    checking_coords = [
+        (row - 1, col - 1), (row - 1, col), (row - 1, col + 1),
+        (row, col - 1),                         (row, col + 1),
+        (row + 1, col - 1), (row + 1, col), (row + 1, col + 1)
+    ]
+    for coord in checking_coords:
+        if (0 <= coord[0] < len(lst)) and (0 <= coord[1] < len(lst)):
+            if lst[coord[0]][coord[1]] == 1:
+                return False
+
+    return True
+
+
+def verify(lst):
+    result = True
+    for row_i, row in enumerate(lst):
+        for col_i, col_v in enumerate(row):
+            if (col_v == 1) and (is_isolate(lst, row_i, col_i) == False):
+                result = False
+                break
+    return result
+
+
+lines = sys.stdin.readlines()
+lst2D = [list(map(int, x.strip().split())) for x in lines]
