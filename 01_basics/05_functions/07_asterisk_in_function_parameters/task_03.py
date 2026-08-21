@@ -19,3 +19,18 @@
 # Output:
 # No output.
 
+def merge_dicts(*dict1, ignored_keys=None):
+    d = {}
+
+    for arg in dict1:
+        arg_copy = arg.copy()
+
+        if ignored_keys is not None:
+            for key in ignored_keys:
+                del arg_copy[key]
+
+        d = {**d, **arg_copy}
+    return d
+
+
+goods = merge_dicts(goods1, goods2, goods3, goods4, ignored_keys=('id', 'date', 'cat_id'))
