@@ -1,8 +1,8 @@
 # Input:
-# d = [1, 2, [True, False], ["Москва", "Уфа", [100, 101], ['True', [-2, -1]]], 7.89]
+# d = [1, 2, [True, False], ["Moscow", "Ufa", [100, 101], ['True', [-2, -1]]], 7.89]
 #
 # Output:
-# [1, 2, True, False, "Москва", "Уфа", 100, 101, 'True', -2, -1, 7.89]
+# [1, 2, True, False, "Moscow", "Ufa", 100, 101, 'True', -2, -1, 7.89]
 #
 # Define a recursive function named get_line_list(d, a=None)
 # that creates a one-dimensional list from the multidimensional list d.
@@ -28,4 +28,4 @@ def get_line_list(d, a=None):
     return a
 
 
-d = [1, 2, [True, False], ["Москва", "Уфа", [100, 101], ['True', [-2, -1]]], 7.89]
+d = [1, 2, [True, False], ["Moscow", "Ufa", [100, 101], ['True', [-2, -1]]], 7.89]
