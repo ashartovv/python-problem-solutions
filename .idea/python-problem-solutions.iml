@@ -8,7 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/01_basics/01_string/03_escape_sequences/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/01_basics/01_string/04_string_formatting/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.14 (python-problem-solutions)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="~\Documents\GitHub\python-problem-solutions\.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
