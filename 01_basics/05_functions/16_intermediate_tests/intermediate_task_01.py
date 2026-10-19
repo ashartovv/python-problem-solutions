@@ -58,6 +58,7 @@ def find_neighbors(words, start_word, end_word, visited_words = []):
             found_words.append(word)
     return found_words
 
+
 def find_chain_words(words, start_word, end_word, chain=None):
     if start_word == end_word or start_word not in words or end_word not in words:
         return None
