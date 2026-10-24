@@ -61,25 +61,27 @@ def find_neighbors(words, start_word, end_word, visited_words = []):
 
 def find_chain_words(words, start_word, end_word, chain=None):
     if start_word == end_word or start_word not in words or end_word not in words:
-        return None
+        return []
 
-    visited_words = [start_word,]
+
     parents = [start_word,]
-    children = [find_neighbors(words, start_word, end_word, visited_words),]
+    children = [find_neighbors(words, start_word, end_word), [start_word,],]
+    visited_words = [start_word, ]
+    visited_words.extend(children[0])
     count = 0
     found = False
 
     if end_word in children[0]:
         found = True
     elif children[0] == []:
-        return None
+        return []
 
     while not found:
         local_count = count
         for children_list in children[local_count:]:
             for child in children_list:
-                visited_words.append(child)
                 result_children = find_neighbors(words, child, end_word, visited_words)
+                visited_words.extend(result_children)
                 if end_word in result_children:
                     parents.append(child)
                     children.append(result_children)
@@ -98,11 +100,11 @@ def find_chain_words(words, start_word, end_word, chain=None):
     parents.reverse()
     children.reverse()
 
-
     chain = [end_word,]
-    for parent_index, child in enumerate(children):
+    for parent_index, child in enumerate(children[:-1]):
         if chain[-1] in child:
             chain.append(parents[parent_index])
+    chain.append(start_word)
     chain.reverse()
 
     return chain
@@ -121,4 +123,4 @@ words = ['вино', 'сука', 'срок', 'арка', 'тура', 'сова',
 start_word = "тара"
 end_word = "сухо"
 
-chain = find_chain_words(words, start_word, end_word)
+chain_result = find_chain_words(words, start_word, end_word)
