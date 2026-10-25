@@ -33,6 +33,7 @@ def operator(a, b, *, opt='sum', initial=0):
     else:
         return 0
 
+
 a, b = map(int, input().split())
 result = operator(a, b, opt='mul', initial=2)
 print(result)
