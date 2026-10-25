@@ -41,10 +41,10 @@
 #
 # Do not print anything to the screen.
 
-def find_neighbors(words, start_word, end_word, visited_words = []):
+def find_neighbors(words, start_word, end_word, visited_words = None):
     found_words = []
     for word in words:
-        if word in visited_words:
+        if visited_words and word in visited_words:
             continue
         counter = 0
         for index, ch in enumerate(word):
