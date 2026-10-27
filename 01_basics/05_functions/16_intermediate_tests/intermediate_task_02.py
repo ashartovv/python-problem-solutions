@@ -59,10 +59,10 @@ def get_ship_coords(board, ship):
     direction = ["right","down"][random.randint(0, 1)]
     if direction == "right":
         row = random.randint(0, board_index)
-        col = random.randint(0, board_index - ship)
+        col = random.randint(0, board_index - ship + 1)
     else:
-        row = random.randint(0, board_index - ship)
-        col = random.randint(0, board_index - 1)
+        row = random.randint(0, board_index - ship + 1)
+        col = random.randint(0, board_index)
 
     for cell in range(ship):
         if direction == "right":
